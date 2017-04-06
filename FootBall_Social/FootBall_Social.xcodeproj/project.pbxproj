@@ -13,6 +13,10 @@
 		8B043EC01E913DB100282D80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B043EBE1E913DB100282D80 /* Main.storyboard */; };
 		8B043EC21E913DB100282D80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B043EC11E913DB100282D80 /* Assets.xcassets */; };
 		8B043EC51E913DB100282D80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B043EC31E913DB100282D80 /* LaunchScreen.storyboard */; };
+		8B69A8271E95190F00592BB2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B69A8261E95190E00592BB2 /* LoginViewController.swift */; };
+		8B69A8291E951D5500592BB2 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B69A8281E951D5500592BB2 /* RegisterViewController.swift */; };
+		8B69A82B1E9557FE00592BB2 /* SRWebClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B69A82A1E9557FE00592BB2 /* SRWebClient.swift */; };
+		8B69A82D1E955C5E00592BB2 /* PitchOwnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B69A82C1E955C5E00592BB2 /* PitchOwnerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +27,10 @@
 		8B043EC11E913DB100282D80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B043EC41E913DB100282D80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B043EC61E913DB100282D80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B69A8261E95190E00592BB2 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8B69A8281E951D5500592BB2 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		8B69A82A1E9557FE00592BB2 /* SRWebClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SRWebClient.swift; path = "../../../../../Downloads/Swift-SRWebClient-master/SRWebClient/SRWebClient.swift"; sourceTree = "<group>"; };
+		8B69A82C1E955C5E00592BB2 /* PitchOwnerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PitchOwnerViewController.swift; sourceTree = "<group>"; };
 		946B42A923D17E55A46B5384 /* Pods_FootBall_Social.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FootBall_Social.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE766AAB72C5CA8B536DEDEB /* Pods-FootBall_Social.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootBall_Social.release.xcconfig"; path = "Pods/Target Support Files/Pods-FootBall_Social/Pods-FootBall_Social.release.xcconfig"; sourceTree = "<group>"; };
 		FBE2AEBEE425A3DDD828039B /* Pods-FootBall_Social.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootBall_Social.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FootBall_Social/Pods-FootBall_Social.debug.xcconfig"; sourceTree = "<group>"; };
@@ -70,7 +78,11 @@
 		8B043EB91E913DB100282D80 /* FootBall_Social */ = {
 			isa = PBXGroup;
 			children = (
+				8B69A8251E95189700592BB2 /* ViewController */,
+				8B69A8241E95189000592BB2 /* View */,
+				8B69A8231E95188B00592BB2 /* Model */,
 				8B043EBA1E913DB100282D80 /* AppDelegate.swift */,
+				8B69A82A1E9557FE00592BB2 /* SRWebClient.swift */,
 				8B043EBC1E913DB100282D80 /* ViewController.swift */,
 				8B043EBE1E913DB100282D80 /* Main.storyboard */,
 				8B043EC11E913DB100282D80 /* Assets.xcassets */,
@@ -78,6 +90,30 @@
 				8B043EC61E913DB100282D80 /* Info.plist */,
 			);
 			path = FootBall_Social;
+			sourceTree = "<group>";
+		};
+		8B69A8231E95188B00592BB2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8B69A8241E95189000592BB2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		8B69A8251E95189700592BB2 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8B69A8261E95190E00592BB2 /* LoginViewController.swift */,
+				8B69A8281E951D5500592BB2 /* RegisterViewController.swift */,
+				8B69A82C1E955C5E00592BB2 /* PitchOwnerViewController.swift */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 		A8B6380518076A06223ED15C /* Frameworks */ = {
@@ -211,8 +247,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B69A8271E95190F00592BB2 /* LoginViewController.swift in Sources */,
 				8B043EBD1E913DB100282D80 /* ViewController.swift in Sources */,
 				8B043EBB1E913DB100282D80 /* AppDelegate.swift in Sources */,
+				8B69A82D1E955C5E00592BB2 /* PitchOwnerViewController.swift in Sources */,
+				8B69A82B1E9557FE00592BB2 /* SRWebClient.swift in Sources */,
+				8B69A8291E951D5500592BB2 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +414,7 @@
 				8B043ECB1E913DB100282D80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
