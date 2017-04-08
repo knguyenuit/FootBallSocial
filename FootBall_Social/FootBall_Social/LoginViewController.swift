@@ -32,7 +32,7 @@ class LoginViewController: UIViewController {
     @IBAction func Login(_ sender: Any) {
         
                 //put the link of the php file here. The php file connects the mysql and swift
-        MBProgressHUD.showAdded(to: self.view, animated: true)
+        //MBProgressHUD.showAdded(to: self.view, animated: true)
         let request = NSMutableURLRequest(url: NSURL(string: "http://cuong.freeiz.com/api/login.php")! as URL)
         request.httpMethod = "POST"
         
@@ -59,10 +59,11 @@ class LoginViewController: UIViewController {
             if temp! == 0 {
                 
                 
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let vc = storyboard.instantiateViewController(withIdentifier: "RegisterView")
-                self.present(vc, animated: true, completion: self.stopMBprogress)
-                            }
+              let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                
+              let vc = storyboard.instantiateViewController(withIdentifier: "RegisterView")
+              self.present(vc, animated: true, completion: self.stopMBprogress)
+            }
             
             
             
@@ -78,7 +79,7 @@ class LoginViewController: UIViewController {
     }
     
     func stopMBprogress(){
-        MBProgressHUD.hide(for: self.view, animated: true)
+        //MBProgressHUD.hide(for: self.view, animated: true)
         let alertController = UIAlertController(title: "Login", message:
             "Login Successfull", preferredStyle: UIAlertControllerStyle.alert)
         alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default,handler: nil))
