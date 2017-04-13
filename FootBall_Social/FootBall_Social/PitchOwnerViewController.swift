@@ -12,6 +12,7 @@ class PitchOwnerViewController: UIViewController,UIImagePickerControllerDelegate
    
     @IBOutlet weak var pickerViewLocation: UIPickerView!
     @IBOutlet weak var imgTest: UIImageView!
+    @IBOutlet weak var textFieldPitchName: UITextField!
     @IBOutlet weak var textViewPriceBoard: UITextView!
     @IBOutlet weak var textFieldHourStart: UITextField!
     @IBOutlet weak var textFieldPrice: UITextField!
@@ -99,15 +100,18 @@ class PitchOwnerViewController: UIViewController,UIImagePickerControllerDelegate
     {
         
         let myUrl = NSURL(string: "http://cuong.freeiz.com/api/upload.php");
-        //let myUrl = NSURL(string: "http://www.boredwear.com/utils/postImage.php");
+
         
         let request = NSMutableURLRequest(url:myUrl! as URL);
         request.httpMethod = "POST";
         
         let param = [
-            "firstName"  : "Sergey",
-            "lastName"    : "Kargopolov",
-            "userId"    : "9"
+//            "firstName"  : "Sergey",
+//            "lastName"    : "Kargopolov",
+//            "userId"    : "9"
+            "pitch_name"  : "\(textFieldPitchName.text!)",
+            "price"    : "\(textViewPriceBoard.text!)",
+            "location"    : "\(btnLocation.titleLabel?.text!)"
         ]
         
         let boundary = generateBoundaryString()
@@ -168,9 +172,8 @@ class PitchOwnerViewController: UIViewController,UIImagePickerControllerDelegate
             }
         }
         
-        let filename = "user-profile1.jpg"
+        let filename = "\(textFieldPitchName.text!).jpg"
         let mimetype = "image/jpg"
-        
         body.appendString(string: "--\(boundary)\r\n")
         body.appendString(string: "Content-Disposition: form-data; name=\"\(filePathKey!)\"; filename=\"\(filename)\"\r\n")
         body.appendString(string: "Content-Type: \(mimetype)\r\n\r\n")
